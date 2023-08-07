@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "prefect-certification-course"
+version = "0.1.0"
+description = ""
+authors = ["Dong Liang <ldifer@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "prefect_certification_course" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+prefect = { extras = ["databricks"], version = "^2.7.10" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
