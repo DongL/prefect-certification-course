@@ -1,1 +1,1 @@
-course repo: https://github.com/discdiver/pacc-online-2023
+# prefect-certification-course
