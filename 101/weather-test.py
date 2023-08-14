@@ -35,4 +35,5 @@ def mark_it_down(temp):
 
 if __name__ == "__main__":
     temp = fetch_weathers(38.9, -77.0)
+    print(temp)
     mark_it_down(temp)
