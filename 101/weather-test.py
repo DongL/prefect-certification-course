@@ -1,5 +1,6 @@
 import httpx
-from prefect import flow
+from prefect import flow, task
+from prefect.artifacts import create_markdown_artifact
 
 
 @flow()
@@ -14,5 +15,24 @@ def fetch_weathers(lat: float, lon: float):
     return most_recent_temp
 
 
+@task
+def mark_it_down(temp):
+    markdown_report = f"""# Weather Report
+    
+## Recent weather
+
+| Time        | Revenue |
+|:--------------|-------:|
+| Now | {temp} |
+| In 1 hour       | {temp + 2} |
+"""
+    create_markdown_artifact(
+        key="weather-report",
+        markdown=markdown_report,
+        description="Very scientific weather report",
+    )
+
+
 if __name__ == "__main__":
-    fetch_weathers(38.9, -77.0)
+    temp = fetch_weathers(38.9, -77.0)
+    mark_it_down(temp)
