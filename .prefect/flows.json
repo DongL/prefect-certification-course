@@ -1,0 +1,8 @@
+{
+  "animal-facts": "pacc-online-2023/102/subflow.py:animal_facts",
+  "fetch-weather": "pacc-online-2023/105/weatherflow.py:fetch_weather",
+  "fetch-weatherb": "pacc-online-2023/101/weather1-flow.py:fetch_weatherb",
+  "fetch-weathers": "pacc-online-2023/101/weather-test.py:fetch_weathers",
+  "get-newcars": "pacc-online-2023/103/block-json-create.py:get_newcars",
+  "pipe": "pacc-online-2023/104/flows.py:pipe"
+}

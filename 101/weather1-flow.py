@@ -3,7 +3,7 @@ from prefect import flow
 
 
 @flow()
-def fetch_weather(lat: float, lon: float):
+def fetch_weatherb(lat: float, lon: float):
     base_url = "https://api.open-meteo.com/v1/forecast/"
     weather = httpx.get(
         base_url,
@@ -15,4 +15,4 @@ def fetch_weather(lat: float, lon: float):
 
 
 if __name__ == "__main__":
-    fetch_weather(38.9, -77.0)
+    fetch_weatherb(38.9, -77.0)
