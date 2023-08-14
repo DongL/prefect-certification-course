@@ -12,6 +12,7 @@ def fetch_weathers(lat: float, lon: float):
     )
     most_recent_temp = float(weather.json()["hourly"]["temperature_2m"][0])
     print(f"Most recent temp C: {most_recent_temp} degrees")
+    mark_it_down(temp)
     return most_recent_temp
 
 
@@ -36,4 +37,3 @@ def mark_it_down(temp):
 if __name__ == "__main__":
     temp = fetch_weathers(38.9, -77.0)
     print(temp)
-    mark_it_down(temp)
